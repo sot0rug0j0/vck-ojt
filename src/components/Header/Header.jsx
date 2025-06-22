@@ -16,11 +16,11 @@ const Header = () => {
   return (
     <>
       <header className='Header1'>
-        <div className='college-name'><Link to="/home" className='nav-item'>Vivekanand College</Link></div>
+        <div className='college-name'><a href="/" data-discover="true">Vivekanand College</a></div>
 
         {/* Desktop Nav */}
         <nav className="navbar desktop-nav">
-          {/* <Link to="/home" className='nav-item'>Home</Link> */}
+          <Link to="/home" className='nav-item'>Home</Link>
           <Link to="/about" className='nav-item'>About</Link>
           <Link to="/courses" className='nav-item'>Courses</Link>
           <Link to="/contact" className='nav-item'>Contact</Link>

@@ -1,43 +1,109 @@
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header/Header";
 import { Link } from "react-router-dom";
+import Popup from "../components/Popup"; // Uses updated Popup.jsx below
 
 const HomePage = () => {
-    return (
-        <div>
-            <Header />
+  const [showPopup, setShowPopup] = useState(false);
 
-            <h1>Welcome to Vivekanand College!</h1>
-            <p>Your journey to excellence starts here.</p>
-             
+  useEffect(() => {
+    setShowPopup(true);
+  }, []);
+
+  return (
+    <div>
+      <Header />
+
+      {showPopup && (
+        <Popup
+          title="Welcome! to my First React App"
+          onClose={() => setShowPopup(false)}
+          autoClose={false}
+        >
+          <div className="popup-profile">
+            <img
+              src="/coder_pfp.jpg" // 👈 Put your image in public folder
+              alt="Profile"
+              className="popup-avatar"
+            />
             <p>
-                <b>Vivekanand College</b> is a premier educational institution dedicated to fostering academic excellence, innovation, and holistic development. Established in 1980, we have proudly served generations of students, empowering them to achieve their full potential.
-                <br /><br />
-                At Vivekanand College, we believe in a vibrant learning environment that extends beyond textbooks. Our state-of-the-art facilities, experienced faculty, and diverse student community create a unique ecosystem where curiosity thrives and future leaders are shaped.
+              <b>Atharv Jadhav</b>
+              <br />
+              MERN Stack Developer • Web Enthusiast
             </p>
-            <h1>Why Choose Vivekanand College?</h1>
-            <hr />
+            {/* ✅ "Got It" Button */}
+            <button className="got-it-btn" onClick={() => setShowPopup(false)}>
+              Got It
+            </button>
+          </div>
+        </Popup>
+      )}
 
-            <ul>
-                <li><b>Legacy of Excellence:</b> Decades of commitment to quality education.</li>
-                <li><b>Experienced Faculty:</b> Learn from renowned experts and passionate educators.</li>
-                <li><b>Modern Facilities:</b> Well-equipped labs, expansive library, and comfortable campus.</li>
-                <li><b>Holistic Development:</b> Focus on co-curricular activities, sports, and community service.</li>
-                <li><b>Strong Placements:</b> Excellent career opportunities with leading companies.</li>
-            </ul>
-            <br />
+      <div className="home-container">
+        <img
+          className="centered-image"
+          src="/college-banner.png"
+          alt="college_banner"
+        />
+      </div>
 
-            <h1>Campus Life & Facilities</h1>
-            <hr />
-            <img src="https://vck-ojt.vercel.app/assets/students-studying-DbLGuwF_.jpeg" width="600px" alt="Students Studying" />
-            <img src="https://vck-ojt.vercel.app/assets/campus-life-Crkero7B.jpg" width="600px" height="300px" alt="Campus Life" />
-            <br />
-            <p>Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.</p>
-            <p>Ready to explore our courses?</p>
-            <Link to="/admission">
-                <button>Explore Courses</button>
-            </Link>
-        </div>
-    );
-}
+      <h1>Welcome to Vivekanand College!</h1>
+      <p>Your journey to excellence starts here.</p>
+
+      <p>
+        <b>Vivekanand College</b> is a premier educational institution...
+      </p>
+
+      <h1>Why Choose Vivekanand College?</h1>
+      <hr />
+      <ul>
+        <li>
+          <b>Legacy of Excellence:</b> Decades of commitment to quality
+          education.
+        </li>
+        <li>
+          <b>Experienced Faculty:</b> Learn from renowned experts and passionate
+          educators.
+        </li>
+        <li>
+          <b>Modern Facilities:</b> Well-equipped labs, expansive library, and
+          comfortable campus.
+        </li>
+        <li>
+          <b>Holistic Development:</b> Co-curricular activities, sports, and
+          community service.
+        </li>
+        <li>
+          <b>Strong Placements:</b> Career opportunities with leading companies.
+        </li>
+      </ul>
+
+      <h1>Campus Life & Facilities</h1>
+      <hr />
+      <img
+        src="/students-studying.jpeg"
+        width="600px"
+        alt="Students Studying"
+      />
+      <img
+        src="/campus-life.jpg"
+        width="600px"
+        height="300px"
+        alt="Campus Life"
+      />
+
+      <p>
+        Explore our vibrant campus and state-of-the-art facilities designed to
+        enhance your learning experience.
+      </p>
+
+      <Link to="/admission">
+        <button style={{ display: "block", margin: "20px auto" }}>
+          Explore Courses
+        </button>
+      </Link>
+    </div>
+  );
+};
 
 export default HomePage;

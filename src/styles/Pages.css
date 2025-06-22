@@ -1,0 +1,18 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 90vh;           enough vertical space */
+  padding: 20px 0px;
+  /* background-color: #f5f5f5; */
+}
+
+
+.centered-image {
+  width: 80%;             /* or set a fixed width like 800px */
+  max-width: 1000px;      /* optional max limit */
+  height: auto;           /* maintain aspect ratio */
+  object-fit: contain;
+  border-radius: 10px;    /* optional */
+}
+

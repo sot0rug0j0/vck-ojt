@@ -8,6 +8,7 @@ const AboutPage = () => {
             <p>
                 <b>Vivekanand College</b> is a premier institution dedicated to academic excellence, innovation, and holistic development. Established in 1980, we have empowered generations of students to achieve their full potential.
             </p>
+            <hr />
             <h2>Our Mission</h2>
             <p>
                 To provide quality education that fosters critical thinking, creativity, and leadership, preparing students to excel in a rapidly changing world.
@@ -16,6 +17,7 @@ const AboutPage = () => {
             <p>
                 To be a center of excellence in higher education, nurturing responsible citizens and future leaders.
             </p>
+            <hr />
             <h2>Core Values</h2>
             <ul>
                 <li><b>Integrity:</b> Upholding the highest standards of honesty and ethics.</li>
@@ -24,6 +26,7 @@ const AboutPage = () => {
                 <li><b>Excellence:</b> Striving for the best in teaching, learning, and research.</li>
                 <li><b>Service:</b> Contributing positively to society and the nation.</li>
             </ul>
+            <hr />
             <h2>Why Choose Us?</h2>
             <ul>
                 <li>Experienced and dedicated faculty</li>
@@ -31,6 +34,7 @@ const AboutPage = () => {
                 <li>Vibrant campus life</li>
                 <li>Strong industry connections and placement support</li>
             </ul>
+            
             <p>
                 Join us at Vivekanand College and embark on a journey of knowledge, growth, and success!
             </p>

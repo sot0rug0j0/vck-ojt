@@ -11,6 +11,10 @@
     z-index:  999;
 }
 
+header{
+    width: 100%;
+}
+
 .college-name{
     font-size: 1.8em;
     font-weight: bold;
