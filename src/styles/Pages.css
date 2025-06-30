@@ -16,3 +16,46 @@
   border-radius: 10px;    /* optional */
 }
 
+.about-page {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  color: #dcdcdc;
+}
+
+.about-section {
+  margin-top: 40px;
+}
+
+.about-section h2 {
+  color: #ffda6a;
+  margin-bottom: 10px;
+}
+
+.about-section p,
+.about-section ul {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section ul {
+  padding-left: 20px;
+}
+
+.about-conclusion {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #d1d1d1;
+}

@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <>
+    <div>
       <header className='Header1'>
         <div className='college-name'><a href="/" data-discover="true">Vivekanand College</a></div>
 
@@ -26,6 +26,7 @@ const Header = () => {
           <Link to="/contact" className='nav-item'>Contact</Link>
           {/* <Link to="/admission" className='nav-item'>Admission</Link> */}
           <Link to="/admission" className='nav-item btn1'>Apply Now!</Link>
+          <Link to="/notfound" className='nav-item'>Not Found</Link>
         </nav>
 
         {/* Hamburger Menu Button */}
@@ -66,7 +67,7 @@ const Header = () => {
         {/* Overlay */}
         {drawerOpen && <div className="drawer-overlay" onClick={closeDrawer} aria-hidden="true"></div>}
       </header>
-    </>
+    </div>
   );
 }
 
